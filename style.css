@@ -51,7 +51,9 @@ header p {
     position: relative;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.189);
 }
-
+.quote-category{
+    text-transform: capitalize;
+}
 .quote .quote-line {
     margin-top: 1rem;
     padding: .5rem;
