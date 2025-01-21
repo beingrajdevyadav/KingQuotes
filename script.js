@@ -60,5 +60,5 @@ function searchQuotes(txt) {
     )
 }
 
-const loveQuotes = searchQuotes("love");
-console.log(loveQuotes);
+// const loveQuotes = searchQuotes("mahatma gandhi");
+// console.log(loveQuotes);
