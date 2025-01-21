@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: #f1f1f1;
+    background-color: #fff;
     color: #555;
 }
 
@@ -24,7 +24,7 @@ header{
     background-color: #112f4c;
 
 }
-header .icon{
+ .icon{
     text-align: center;
 }
 header p{
@@ -32,8 +32,44 @@ header p{
     font-size: 12px;
 }
 
-/* controls section */
+/* hero section  */
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #555;
+    height: 45vh;
+}
 
+.hero .today-quote{
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    height: 80%;
+    position: relative;
+box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.189);
+}
+
+.today-quote .quote-line{
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-top: 1rem;
+
+}
+
+.lft_icn{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #444;
+    padding: 5px;
+    border-radius: 50%;
+    color: #ddd;
+}
+/* controls section */
 .controls{
     padding: 1rem 2rem;
     background-color: #fff;
@@ -42,7 +78,7 @@ header p{
     align-items: center;
 }
  .search{
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     padding: .5rem;
     border-radius: 5px;
     width: 30%;
@@ -80,6 +116,14 @@ header p{
 
 footer{
     text-align: center;
-    padding: 1rem 0;
+    padding:1rem 2rem ;
     font-size: 12px;
+    background-color: #112f4c;
+    color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 10%;
 }
