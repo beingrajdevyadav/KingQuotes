@@ -7,3 +7,22 @@
     box-sizing: border-box;
     font-family: "Poppins", serif;
 }
+
+body{
+    background-color: #0d2a47;
+    color: #ddd;
+    padding: 1rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 12px;
+}
