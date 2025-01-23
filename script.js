@@ -21,7 +21,7 @@ function searchQuotesByCategory(category) {
 // --------------------------------------
 const searchBtn = document.querySelector("#searchBtn");
 searchBtn.addEventListener("click", function () {
-    CURRENT_QUOTES.length  = 0;
+    CURRENT_QUOTES.length = 0;
     // console.log("clicked -", this);
 
     let searchInputTxt = document.querySelector('#searchInput').value;
@@ -39,7 +39,7 @@ searchBtn.addEventListener("click", function () {
 // ---------------------------------------------- 
 const searchSelection = document.querySelector("#searchSelection");
 searchSelection.addEventListener("change", function () {
-  // to filter
+    // to filter
     let currentQuotes = searchQuotesByCategory(this.value);
 
     // console.log("from category selection function", currentQuotes);
@@ -53,6 +53,14 @@ searchSelection.addEventListener("change", function () {
 // ---------------------------------------------- 
 
 function PrintQuotes(quotes) {
+    
+    // total qoutes count tag
+    const totalTag = document.querySelector("#totalQuotesCount");
+    totalTag.innerHTML = `Total Results : ${quotes.length}`;
+    // ---------------------------
+
+
+    // total quotes list
     const quotesDiv = document.getElementById('quotesList');
     quotesDiv.innerHTML = '';
     quotes.forEach(quote => {
