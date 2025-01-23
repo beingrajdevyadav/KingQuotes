@@ -8,9 +8,17 @@ function searchQuotes(txt) {
     )
 }
 
+// --------------------------------------
+const searchBtn = document.querySelector("#searchBtn");
+searchBtn.addEventListener("click", function(){
+    // console.log("clicked -", this);
 
+    let searchInputTxt = document.querySelector('#searchInput').value ;
+    // console.log(searchInput.value.trim().toLocaleLowerCase());
 
-// console.log(Quotes);
+  let currentQuotes =  searchQuotes(searchInputTxt);
+  console.log(currentQuotes)
+})
 
 
 // function to print quotes
