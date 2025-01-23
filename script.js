@@ -17,7 +17,8 @@ searchBtn.addEventListener("click", function(){
     // console.log(searchInput.value.trim().toLocaleLowerCase());
 
   let currentQuotes =  searchQuotes(searchInputTxt);
-  console.log(currentQuotes)
+//   console.log(currentQuotes)
+    PrintQuotes(currentQuotes);
 })
 
 
