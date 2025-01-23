@@ -168,12 +168,7 @@ footer .logo {
 
     }
 
-    footer {
-        padding: 1rem;
-    }
-
     
-
     .search {
         width: 100%;
         padding: 0;
@@ -200,8 +195,12 @@ footer .logo {
     }
 
     footer {
-        flex-direction: column;
-        flex-wrap: reverse;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    footer .logo{
+        width: 50%;
     }
 
 }
