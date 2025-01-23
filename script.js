@@ -10,7 +10,7 @@ function searchQuotes(txt) {
 
 
 
-console.log(Quotes);
+// console.log(Quotes);
 
 
 // function to print quotes
