@@ -36,6 +36,14 @@ header p {
 
 
 /* quotesList */
+.total-quotes{
+    padding: .5rem;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
 .quotes-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
