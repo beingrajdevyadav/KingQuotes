@@ -31,7 +31,7 @@ searchBtn.addEventListener("click", function () {
     CURRENT_QUOTES = [...currentQuotes];
 
     // console.log("from search input function", CURRENT_QUOTES);
-    // PrintQuotes(currentQuotes);
+    PrintQuotes(currentQuotes);
 })
 
 // ----------------------------------------------
@@ -53,7 +53,7 @@ searchSelection.addEventListener("change", function () {
 // ---------------------------------------------- 
 
 function PrintQuotes(quotes) {
-    
+
     // total qoutes count tag
     const totalTag = document.querySelector("#totalQuotesCount");
     totalTag.innerHTML = `Total Results : ${quotes.length}`;
