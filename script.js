@@ -48,6 +48,9 @@ searchSelection.addEventListener("change", function () {
     let currentQuotes = searchQuotesByCategory(this.value);
 
     // console.log("from category selection function", currentQuotes);
+
+    // to show toast notification
+    showToast(` ${this.value} Quotes.`);
     PrintQuotes(currentQuotes);
     // console.log(this.value);
 });
