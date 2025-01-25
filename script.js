@@ -32,6 +32,10 @@ searchBtn.addEventListener("click", function () {
     // console.log("clicked -", this);
     let searchInputTxt = document.querySelector('#searchInput').value;
     // console.log(searchInput.value.trim().toLocaleLowerCase());
+    if (searchInputTxt === '') {
+        showToast("Please enter a search term.");
+        return;
+    }
     let currentQuotes = searchQuotes(searchInputTxt);
     
     // to show toast notification
