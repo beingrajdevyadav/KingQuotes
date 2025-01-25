@@ -111,7 +111,7 @@ function remixArray(array) {
 // ---------------------------------------------- 
 
 const printIt = remixArray(Quotes);
-PrintQuotes(printIt.slice(0,8));
+PrintQuotes(printIt.slice(0,7));
 
 
 // ---------------------------------------------- 
