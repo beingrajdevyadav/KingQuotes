@@ -11,6 +11,7 @@
 body {
     background-color: #fff;
     color: #555;
+    position: relative;
 }
 
 header {
@@ -139,6 +140,46 @@ header p {
     color: #555;
 }
 
+/* toast */
+#toast-container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; */
+    z-index: 999;
+}
+.toast{
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    opacity: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 1s ease;
+}
+
+.toast.show{
+    /* animation: fadein 1s ease; */
+    opacity: 1;
+}
+
+.toast .progress-bar{
+    height: 5px;
+    background-color: #f1c40f;
+    width: 100%;
+    position: absolute;
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    transition: width 3s linear;
+}
+/* footer */
 footer {
     text-align: center;
     padding: 1rem 2rem;
@@ -154,7 +195,21 @@ footer .logo {
     width: 10%;
 }
 
-/* /responsiveness/ */
+
+/* css animations */
+@keyframes fadein {
+    from{
+        bottom:0;
+        opacity: 0;
+    }
+    to{
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+
+/* responsiveness */
 @media screen and (max-width: 768px) {
     header {
         padding: 1rem;

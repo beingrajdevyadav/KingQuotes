@@ -1,4 +1,8 @@
-// importing Quotes from data.js file
+
+// ---------------------------------------------- 
+//        importing Quotes from data.js file
+// ---------------------------------------------- 
+
 import Quotes from './data.js';
 
 
@@ -16,7 +20,12 @@ function searchQuotesByCategory(category) {
     return Quotes.filter(item => item.category === category);
 }
 
-// --------------------------------------
+
+
+// ---------------------------------------------- 
+//          Search Button Functionality
+// ---------------------------------------------- 
+
 const searchBtn = document.querySelector("#searchBtn");
 searchBtn.addEventListener("click", function () {
     
@@ -44,15 +53,11 @@ searchSelection.addEventListener("change", function () {
 // ---------------------------------------------- 
 //            function to print quotes
 // ---------------------------------------------- 
-
 function PrintQuotes(quotes) {
-
     // total qoutes count tag
     const totalTag = document.querySelector("#totalQuotesCount");
     totalTag.innerHTML = `Total Results : ${quotes.length}`;
-    // ---------------------------
-
-
+    
     // total quotes list
     const quotesDiv = document.getElementById('quotesList');
     quotesDiv.innerHTML = '';
@@ -80,7 +85,10 @@ function PrintQuotes(quotes) {
     });
 };
 
-// to remixArray
+// ---------------------------------------------- 
+//              to remixArray
+// ---------------------------------------------- 
+
 function remixArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -88,6 +96,24 @@ function remixArray(array) {
     }
     return array;
 }
-// printing quotes
+
+// ---------------------------------------------- 
+//              printing quotes
+// ---------------------------------------------- 
+
 const printIt = remixArray(Quotes);
-PrintQuotes(printIt);
+PrintQuotes(printIt.slice(0,8));
+
+
+// ---------------------------------------------- 
+// toast notifications
+// ---------------------------------------------- 
+const toastBtn = document.querySelector("#shwbtn");
+toastBtn.addEventListener("click", function(){
+    let toast = document.getElementById("toast");
+    toast.className = "toast show";
+
+    setTimeout(function(){
+        toast.className = toast.className.replace("show", "");
+    }, 2000);
+})
