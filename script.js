@@ -33,7 +33,9 @@ searchBtn.addEventListener("click", function () {
     let searchInputTxt = document.querySelector('#searchInput').value;
     // console.log(searchInput.value.trim().toLocaleLowerCase());
     let currentQuotes = searchQuotes(searchInputTxt);
-    // console.log("from search input function", CURRENT_QUOTES);
+    
+    // to show toast notification
+    showToast(` ${searchInputTxt} Quotes.`);
     PrintQuotes(currentQuotes);
 })
 
@@ -114,6 +116,7 @@ function showToast(message){
     toast.classList.add("toast");
 
     toast.innerHTML = `
+        <i class="fa-solid fa-bell"></i>
     <span>${message}</span>
     `;
 
