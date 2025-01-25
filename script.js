@@ -151,8 +151,3 @@ function showToast(message){
     }, 3000);
 }
 
-// on button click
-const toastBtn = document.getElementById("shwbtn");
-toastBtn.addEventListener("click", ()=>{
-    showToast("This is a toast notification");
-})
