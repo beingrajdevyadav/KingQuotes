@@ -108,12 +108,35 @@ PrintQuotes(printIt.slice(0,8));
 // ---------------------------------------------- 
 // toast notifications
 // ---------------------------------------------- 
-const toastBtn = document.querySelector("#shwbtn");
-toastBtn.addEventListener("click", function(){
-    let toast = document.getElementById("toast");
-    toast.className = "toast show";
+function showToast(message){
+    const toastContainer = document.getElementById("toast-container");
+    const toast = document.createElement("div");
+    toast.classList.add("toast");
 
-    setTimeout(function(){
-        toast.className = toast.className.replace("show", "");
-    }, 2000);
+    toast.innerHTML = `
+    <span>${message}</span>
+    `;
+
+    toastContainer.appendChild(toast);
+
+    // show the toast for 3 seconds
+    setTimeout(() => {
+        toast.classList.add("show");
+    }, 100);
+
+   
+
+    // remove the toast after 3 seconds
+    setTimeout(()=>{
+        toast.classList.remove("show");
+        setTimeout(() => {
+            toast.remove();
+        }, 1000);
+    }, 3000);
+}
+
+// on button click
+const toastBtn = document.getElementById("shwbtn");
+toastBtn.addEventListener("click", ()=>{
+    showToast("This is a toast notification");
 })

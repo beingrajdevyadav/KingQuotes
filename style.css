@@ -196,17 +196,7 @@ footer .logo {
 }
 
 
-/* css animations */
-@keyframes fadein {
-    from{
-        bottom:0;
-        opacity: 0;
-    }
-    to{
-        bottom: 30px;
-        opacity: 1;
-    }
-}
+
 
 
 /* responsiveness */
