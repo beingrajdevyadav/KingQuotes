@@ -118,6 +118,12 @@ PrintQuotes(printIt.slice(0,8));
 // toast notifications
 // ---------------------------------------------- 
 function showToast(message){
+
+    // to ring bell sound
+    const bellSound = new Audio("bell.mp3");
+    bellSound.play();
+
+    // toast script
     const toastContainer = document.getElementById("toast-container");
     const toast = document.createElement("div");
     toast.classList.add("toast");
